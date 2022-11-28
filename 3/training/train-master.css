@@ -1,0 +1,69 @@
+/* h1.main-title {
+    color: red;
+}
+
+p strong {
+    color: blue;
+} */
+
+/* ! ----------------------------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* strong {
+    font-weight: normal;
+} */
+
+.main-title {
+    color: yellow;
+    font-size: 50px;
+    font-style: italic;
+    text-transform: uppercase;
+    text-shadow: 0 3px 3px red;
+}
+
+.background-img {
+    background-image: url(../2/site1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100px center;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-indent: 30px;
+    text-transform: uppercase;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+    background-color: rgba(157, 119, 119, 0.5) !important;
+}
+
+.parent {
+    background-color: red;
+}
+
+.child {
+    background-color: blue;
+}
+
+.parent,
+.child {
+    width: 50vw;
+}
+
+.absolute {
+    display: block;
+    border: 1px solid black;
+}

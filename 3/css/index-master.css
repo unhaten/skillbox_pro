@@ -1,0 +1,29 @@
+.main-content {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222020;
+}
+
+.main-title{
+  color: white;
+  font-family: 'Graphik LCG', sans-serif;
+  margin: 30px;
+}
+
+.download-link {
+  padding: 20px;
+  color: white;
+  background-color: #2f1ce4;
+  border: solid 3px #2f1ce4;
+
+}
+
+.more-link {
+  padding: 20px;
+  color: white;
+  opacity: 0.9;
+  border: solid 3px white;
+}
