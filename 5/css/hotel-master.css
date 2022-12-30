@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Muller";
+    src: url("../fonts/MullerRegular.woff2") format("woff2"),
+        url("../fonts/MullerRegular.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    font-family: Muller;
+}
+
+/* ! HEADER */
+
+.header {
+    /* display: flex; */
+    margin-top: 30px;
+}
+
+.container {
+    max-width: 1921px;
+    margin: 0 375px;
+}
+
+.above-nav {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    margin-bottom: 30px;
+}
+
+.above-nav-telephone {
+    margin-left: 40px;
+}
+
+.above-nav-left {
+    margin-left: auto;
+}
+
+/* ! NAV */
+
+.nav {
+    display: flex;
+    
+    /* margin: 0 45px; */
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 45px;
+}
+
+.nav-btn {
+    margin-left: auto;
+}
+
+/* ! MAIN + SPECIAL */
+
+.special {
+    margin-top: 70px;
+}
+
+.special-list{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.special-item:first-child{
+    height: 70px;
+}
+
+.special-item {
+    /* display: flex; */
+    /* align-items: center; */
+}
