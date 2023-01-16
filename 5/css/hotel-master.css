@@ -1,7 +1,6 @@
 @font-face {
     font-family: "Muller";
-    src: url("../fonts/MullerRegular.woff2") format("woff2"),
-        url("../fonts/MullerRegular.woff") format("woff");
+    src: url("../fonts/MullerRegular.woff2"), url("../fonts/MullerRegular.woff");
 }
 
 * {
@@ -26,6 +25,10 @@ html {
     font-family: Muller;
 }
 
+body {
+    background: #e5e5e5;
+}
+
 /* ! HEADER */
 
 .header {
@@ -40,17 +43,41 @@ html {
 
 .above-nav {
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
+    align-items: center;
+    /* justify-content: center; */
     margin-bottom: 30px;
+}
+
+.above-nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 261px;
+    height: 54px;
 }
 
 .above-nav-telephone {
     margin-left: 40px;
+    color: #666666;
 }
 
-.above-nav-left {
+.above-nav-right {
     margin-left: auto;
+}
+
+.above-nav-right-profile {
+    color: #cc9933;
+}
+
+.above-nav-right-icon {
+    display: inline-block;
+    background-image: url("../project-img/backArrow.svg");
+    width: 21px;
+    height: 12px;
+    margin-right: 7px;
+    color: #CC9933;
 }
 
 /* ! NAV */
@@ -79,7 +106,7 @@ html {
     margin-top: 70px;
 }
 
-.special-list{
+.special-list {
     display: flex;
     align-items: start;
     flex-wrap: wrap;
@@ -113,10 +140,9 @@ html {
     margin-top: 20px;
 }
 
-.services-item{
+.services-item {
     width: 50%;
 }
-
 
 /* .services-item:nth-child(2n) {
     margin-left: 50%;
@@ -154,6 +180,6 @@ html {
     width: 30%;
 }
 
-.accommodation-item:not(:first-child):not(:nth-child(3n+1)) {
+.accommodation-item:not(:first-child):not(:nth-child(3n + 1)) {
     margin-left: 30px;
 }
