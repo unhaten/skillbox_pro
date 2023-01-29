@@ -350,8 +350,6 @@ body {
 
 .accommodation {
     margin-top: 70px;
-    /* !FIXME: margin-bottom destroy and implement into next section margin-top */
-    margin-bottom: 70px;
 }
 
 .accommodation-list {
@@ -444,4 +442,72 @@ body {
     -moz-transform: translateY(4px);
     -ms-transform: translateY(4px);
     -o-transform: translateY(4px);
+}
+
+/* ! FORM */
+
+.form {
+    margin-top: 70px;
+}
+
+.form-header {
+    padding-top: 45px;
+}
+
+.form-container {
+    /* height: 256px; */
+    padding-bottom: 45px;
+    background-color: #E9E9E9;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.form-content {
+    display: flex;
+    /* width: 1080px; */
+    margin-top: 20px;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-top: 31px;
+    padding-bottom: 32px;
+    background-color: #fff;
+}
+
+.form-content-block {
+    background-color: #fff;
+}
+
+.form-content-block:first-child {
+    margin-left: 28px;
+}
+
+.form-content-block:not(:first-child) {
+    margin-left: 41px;
+}
+
+.form-content-paragraphs {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.form-content-select{
+}
+
+.form-content-input {
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.form-content-input-number {
+    width: 121px;
+    border-bottom: 1px solid #E9E9E9;
+}
+/* ! CONTACTS */
+
+.contacts {
+    margin-top: 70px;
 }
