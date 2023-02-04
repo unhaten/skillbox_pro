@@ -864,45 +864,59 @@
                         autocomplete
                         method="POST"
                     >
-
-                        <div
-                            class="form-content-block form-content-city"
-                        >
+                        <div class="form-content-block form-content-city">
                             <p class="form-content-paragraphs">Город вылета</p>
-                            <select name="city" id="city" class="form-content-select" style="border:none;">
-                                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                            <select
+                                name="city"
+                                id="city"
+                                class="form-content-select"
+                                style="border: none"
+                            >
+                                <option value="Санкт-Петербург">
+                                    Санкт-Петербург
+                                </option>
                             </select>
-                            <span class="form-content-down-arrow"></span>
                         </div>
-                        <div
-                            class="form-content-block form-content-country"
-                        >
+                        <div class="form-content-block form-content-country">
                             <p class="form-content-paragraphs">Страна</p>
-                            <input type="text" value="Австралия" class="form-content-input" />
-                            <span class="form-content-up-arrow"></span>
+                            <select
+                                name="country"
+                                id="country"
+                                class="form-content-select form-content-select-country"
+                                style="border: none"
+                            >
+                                <option value="Австралия">Австралия</option>
+                            </select>
                         </div>
-                        <div
-                            class="form-content-block form-content-date"
-                        >
+                        <div class="form-content-block form-content-date">
                             <p class="form-content-paragraphs">Дата прибытия</p>
-                            <input type="date" value="2021-10-18" class="form-content-input" />
+                            <input
+                                type="date"
+                                name="date"
+                                value="2021-10-18"
+                                class="form-content-input"
+                            />
                         </div>
-                        <div
-                            class="form-content-block form-content-nights"
-                        >
+                        <div class="form-content-block form-content-nights">
                             <p class="form-content-paragraphs">Ночей</p>
-                            <input type="number" value="6" class="form-content-input form-content-input-number" />
+                            <input
+                                type="number"
+                                name="nights"
+                                value="6"
+                                class="form-content-input form-content-input-number"
+                            />
                         </div>
-                        <div
-                            class="form-content-block form-content-tourists"
-                        >
+                        <div class="form-content-block form-content-tourists">
                             <p class="form-content-paragraphs">Туристы</p>
-                            <input type="number" value="2" class="form-content-input form-content-input-number" />
+                            <input
+                                type="number"
+                                required
+                                name="tourists"
+                                value="2"
+                                class="form-content-input form-content-input-number"
+                            />
                         </div>
-                        <button class="form-btn">Найти</button>
-
-                        
-                        
+                        <button class="btn form-btn">Найти</button>
                     </form>
                 </div>
             </section>
@@ -910,8 +924,183 @@
             <!-- ! CONTACTS -->
 
             <section class="contacts">
-                <div class="container"></div>
+                <div class="container">
+                    <h2 class="section-header">Контакты</h2>
+                    <div class="contacts-content">
+                        <div class="contacts-left-content">
+                            <ul class="contacts-list">
+                                <li class="contacts-list-item">
+                                    <p class="contacts-item-header">Адрес</p>
+                                    <div class="contacts-item-content">
+                                        <p class="contacts-item-text">
+                                            Москва, улица Юности, дом 5 строение
+                                            4, офис 2
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="contacts-list-item">
+                                    <p class="contacts-item-header">Телефоны</p>
+                                    <div class="contacts-item-content">
+                                        <p>
+                                            <a
+                                                href="tel:+74995356434"
+                                                class="contacts-item-tel"
+                                                >+7 499 535-64-34</a
+                                            >
+                                        </p>
+                                        <p>
+                                            <a
+                                                href="tel:+74950050544"
+                                                class="contacts-item-tel"
+                                                >+7 495 005-05-44</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="contacts-list-item contacts-list-item-mail"
+                                >
+                                    <p class="contacts-item-header">Email</p>
+                                    <div class="contacts-item-content">
+                                        <p>
+                                            <a
+                                                href="#"
+                                                class="contacts-item-email"
+                                                >lg.oona@mail.ru</a
+                                            >
+                                        </p>
+                                        <p class="contacts-item-email-hint">
+                                            по вопросам бронирования
+                                        </p>
+                                        <p>
+                                            <a
+                                                href="#"
+                                                class="contacts-item-email"
+                                                >hotels.ln@mail.ru</a
+                                            >
+                                        </p>
+                                        <p class="contacts-item-email-hint">
+                                            по вопросам сотрудничества
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="contacts-list-item">
+                                    <p class="contacts-item-header">График</p>
+                                    <div class="contacts-item-content">
+                                        <p class="contacts-item-text">
+                                            Понедельник-пятница,
+                                            с 10:00 до 19:00
+                                        </p>
+                                    </div>
+                                </li>
+                                <li
+                                    class="contacts-list-item contacts-list-btn"
+                                >
+                                    <button class="btn content-item-btn">
+                                        Построить маршрут
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts-right-content">
+                            <img
+                                src="project-img/reception.png"
+                                alt=""
+                                class="contacts-right-content-img"
+                            />
+                        </div>
+                    </div>
+                </div>
             </section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-left-content">
+                            <ul class="footer-left-list">
+                                <li class="footer-left-item">
+                                    <p class="footer-item-text">
+                                        © 2012–2020 Управляющая компания
+                                        Объединённой сети «Лагуна Хотелс»
+                                    </p>
+                                </li>
+                                <li class="footer-left-item">
+                                    <p class="footer-item-text">
+                                        Представленная на сайте информация
+                                        носит справочный характер и не является
+                                        публичной офертой
+                                    </p>
+                                </li>
+                                <li class="footer-left-item">
+                                    <a href="#" class="footer-item-link"
+                                        >Пользовательское соглашение</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-right-content">
+                            <ul class="footer-right-list">
+                                <li class="footer-right-item">
+                                    <p class="footer-item-text">
+                                        11710, улица Юности, дом 5 строение 4,
+                                        офис 2
+                                    </p>
+                                </li>
+                                <li class="footer-right-item">
+                                    <div class="footer-right-container">
+                                        <p>
+                                            <a
+                                                href="tel:+74995356434"
+                                                class="footer-item-link"
+                                            >
+                                                +7 499 535-64-34
+                                            </a>
+                                        </p>
+                                        <p>
+                                            <a
+                                                href="tel:+74950050544"
+                                                class="footer-item-link"
+                                            >
+                                                +7 495 005-05-44
+                                            </a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="footer-right-item">
+                                    <div class="footer-right-container">
+                                        <p>
+                                            <a href="#" class="footer-item-link"
+                                                >lg.oona@mail.ru</a
+                                            >
+                                        </p>
+                                        <p>
+                                            <a href="#" class="footer-item-link"
+                                                >hotels.ln@mail.ru</a
+                                            >
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-edge-content">
+                            <ul class="footer-edge-list">
+                                <li class="footer-edge-item">
+                                    <span class="footer-edge-logo footer-logo-owl"></span>
+                                </li>
+                                <li class="footer-edge-item">
+                                    <span class="footer-edge-logo footer-logo-ok"></span>
+                                </li>
+                                <li class="footer-edge-item">
+                                    <span class="footer-edge-logo footer-logo-vk"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="footer-logo"></span>
+                    </div>
+                </div>
+            </footer>
         </main>
     </body>
 </html>

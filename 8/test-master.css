@@ -1,0 +1,79 @@
+:root {
+    --font-size: 22px;
+}
+
+body{
+    font-size: var(--font-size);
+}
+
+.scene {
+    --font-size: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size);
+    transition: color .3s linear;
+    -webkit-transition: color .3s linear;
+    -moz-transition: color .3s linear;
+    -ms-transition: color .3s linear;
+    -o-transition: color .3s linear;
+    /* transition-delay: 0.2s; */
+}
+
+.scene:hover {
+    color: white;
+}
+
+.scene:hover::before,
+.scene:hover::after {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+}
+
+.scene > * {
+    position: relative;
+    z-index: 1;
+}
+
+.scene::before,
+.scene::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: navy;
+    transition: transform .3s linear;
+    -webkit-transition: transform .3s linear;
+    -moz-transition: transform .3s linear;
+    -ms-transition: transform .3s linear;
+    -o-transition: transform .3s linear;
+}
+
+.scene::before {
+    top: 0;
+    bottom: 50%;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.scene::after {
+    top: 50%;
+    bottom: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+}
