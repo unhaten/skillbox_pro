@@ -1642,18 +1642,20 @@ h2 {
 
     .hero__title,
     .hero__descr {
+        /* width: 100%; */
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
 
     .hero__title {
+        width: 90%;
         font-size: 25px;
         line-height: 25px;
     }
 
     .hero__descr {
-        width: 80%;
+        width: 90%;
         margin-top: 6px;
         font-size: 14px;
         line-height: 20px;
