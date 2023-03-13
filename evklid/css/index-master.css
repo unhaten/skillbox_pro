@@ -350,11 +350,16 @@ h2 {
     background-image: url("../img/about-example-pic.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 32px;
     -webkit-border-radius: 32px;
     -moz-border-radius: 32px;
     -ms-border-radius: 32px;
     -o-border-radius: 32px;
+}
+
+.about__image {
+    display: none;
 }
 
 .example__content {
@@ -941,6 +946,7 @@ h2 {
         width: 100%;
         background-image: url("../img/about-example-pic-768.png");
         background-size: cover;
+        background-position: center;
     }
 
     .step__desc {
@@ -1668,10 +1674,24 @@ h2 {
     /* ! ABOUT */
 
     .about__example {
-        height: 600px;
+        height: auto;
+        background-image: none;
+    }
+
+    .about__image {
+        display: block;
+    }
+
+    .example__content {
+        padding: 0;
+    }
+
+    .example__desc {
+        margin-top: 8px;
     }
 
     .info__logo {
+        margin-top: 30px;
         width: 90px;
         height: 76px;
     }
@@ -1782,10 +1802,6 @@ h2 {
     }
 
     /* ! ABOUT */
-
-    .about__example {
-        height: 550px;
-    }
 
     .info__logo {
         width: 80px;
@@ -1905,10 +1921,6 @@ h2 {
     .about__example {
         display: block;
         width: 290px;
-        height: 400px;
-        background-image: url("../img/about-example-pic-320.png");
-        /* background-size: cover; */
-        background-size: auto;
         border-radius: 16px;
         -webkit-border-radius: 16px;
         -moz-border-radius: 16px;
@@ -1918,7 +1930,6 @@ h2 {
 
     .example__content {
         display: block;
-        padding-top: 200px;
         background-color: transparent;
     }
 
