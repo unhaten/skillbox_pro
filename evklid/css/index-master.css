@@ -17,8 +17,8 @@
 }
 
 html {
-    font-family: "Mont";
-    /* font-family: Montserrat; */
+    /* font-family: "Mont"; */
+    font-family: Montserrat;
 }
 
 ul {
@@ -939,6 +939,8 @@ h2 {
 
     .about__example {
         width: 100%;
+        background-image: url("../img/about-example-pic-768.png");
+        background-size: cover;
     }
 
     .step__desc {
@@ -1577,7 +1579,7 @@ h2 {
 
 /* ? 425px */
 
-@media (max-width: 426px) {
+@media screen and (max-width: 426px) {
     /* ! GLOBAL STYLES */
 
     .container {
@@ -1626,6 +1628,9 @@ h2 {
     }
 
     .banner__slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding-top: 50px;
     }
 
@@ -1649,7 +1654,8 @@ h2 {
     }
 
     .hero__btn {
-        margin: 32px 0 0 25%;
+        margin: 0;
+        margin-top: 32px;
         padding: 13px 28px;
         font-size: 12px;
         line-height: 15px;
@@ -1872,7 +1878,6 @@ h2 {
     }
 
     .hero__btn {
-        margin: 32px 64px 0 64px;
         padding: 13px 28px;
         font-size: 12px;
         line-height: 15px;
