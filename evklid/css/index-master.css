@@ -10,6 +10,9 @@
 
 :root {
     --index: calc(1vh + 1vw);
+    --swiper-pagination-bullet-horizontal-gap: 20px;
+    --swiper-pagination-bullet-size: 15px;
+    --swiper-pagination-bottom: 30px;
 }
 
 * {
@@ -66,6 +69,7 @@ h2 {
     transition-property: background-color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -85,6 +89,64 @@ h2 {
     font-weight: 400;
     font-size: 48px;
     line-height: 59px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 420px;
+    height: 100vh;
+    padding-left: 50px;
+    padding-top: 40px;
+    background-color: #fff;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-101%);
+    -webkit-transform: translateX(-101%);
+    -moz-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    -o-transform: translateX(-101%);
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+
+.menu__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu__btn path {
+    transition-property: fill;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.menu__btn:active path {
+    fill: #e1670e;
+}
+
+.menu__list {
+    margin-top: 107px;
+}
+
+.menu__item {
+    margin-bottom: 60px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.is-active {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
 }
 
 /* ! LOCAL STYLES */
@@ -118,6 +180,7 @@ h2 {
     transition-property: outline;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    cursor: pointer;
 }
 
 .burger rect {
@@ -210,15 +273,12 @@ h2 {
     transition-property: outline;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    cursor: pointer;
 }
 
 .header__search svg {
     width: 32px;
     height: 32px;
-}
-
-.header__search:focus {
-    outline: 2px solid #ffb84d;
 }
 
 .header__search rect {
@@ -251,7 +311,42 @@ h2 {
     margin-top: 50px;
 }
 
-.hero__banner {
+.swiper {
+    position: relative;
+    width: 100%;
+    height: 620px;
+}
+
+.swiper-slide {
+    background-repeat: no-repeat;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #cacaca;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+
+.slide-1 {
+    background-image: url("../img/hero-first.png");
+}
+
+.slide-2 {
+    background-image: url("../img/hero-pic-1920-2.png");
+}
+
+.slide-3 {
+    background-image: url("../img/hero-pic-1920-3.png");
+}
+
+/* .hero__banner {
     position: relative;
     width: 100%;
     height: 620px;
@@ -262,7 +357,7 @@ h2 {
     -moz-border-radius: 32px;
     -ms-border-radius: 32px;
     -o-border-radius: 32px;
-}
+} */
 
 .banner__slide {
     height: 100%;
@@ -472,13 +567,16 @@ h2 {
 }
 
 .how__link {
-    display: inline-block;
+    /* display: inline-block; */
     padding: 5px;
     font-size: 18px;
     line-height: 22px;
-    transition-property: color, outline;
+    border: none;
+    background-color: transparent;
+    transition-property: color, outline, border;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    cursor: pointer;
 }
 .how__link:hover {
     color: #ff9900;
@@ -489,8 +587,17 @@ h2 {
 }
 
 .how__link:active {
-    outline: 2px solid transparent;
+    outline: none;
+    border: none;
     color: #e1670e;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content-active {
+    display: block;
 }
 
 .step__slide {
@@ -510,7 +617,8 @@ h2 {
 }
 
 .step__desc {
-    width: 758px;
+    width: auto;
+    margin-right: 142px;
     line-height: 32px;
 }
 
@@ -553,19 +661,9 @@ h2 {
 }
 
 .step__pic {
-    width: 870px;
-    height: 460px;
+    display: block;
     margin-top: auto;
-    margin-left: auto;
-    background-image: url("../img/how-pic-1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    border-radius: 32px;
-    -webkit-border-radius: 32px;
-    -moz-border-radius: 32px;
-    -ms-border-radius: 32px;
-    -o-border-radius: 32px;
+    margin-bottom: auto;
 }
 
 .step__img {
@@ -574,6 +672,16 @@ h2 {
     -moz-border-radius: 32px;
     -ms-border-radius: 32px;
     -o-border-radius: 32px;
+}
+
+.step__img-2 {
+    content: url("../img/how-pic-2.jpg");
+}
+.step__img-3 {
+    content: url("../img/how-pic-3.jpg");
+}
+.step__img-4 {
+    content: url("../img/how-pic-4.jpg");
 }
 
 /* ! FAQ */
@@ -586,12 +694,40 @@ h2 {
     margin-top: 32px;
 }
 
+@keyframes invisiblyGrowFontSize {
+    0% {
+        font-size: 0;
+        opacity: 0;
+    }
+    100% {
+        font-size: 1em;
+        opacity: 0;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .details {
     position: relative;
     padding: 31px 0 30px 0;
     transition-property: color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
+    transition-property: height;
+    transition-duration: 5s;
+    transition-timing-function: ease;
+}
+
+.details[open] .details__answer {
+    animation-name: invisiblyGrowFontSize, fadeIn;
+    animation-duration: 300ms, 300ms;
+    animation-delay: 0ms, 300ms;
 }
 
 .details:hover {
@@ -617,7 +753,7 @@ h2 {
     fill: white;
 }
 
-.details:active .question__icon {
+.details[open] .question__icon {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -904,9 +1040,9 @@ h2 {
 
     /* ! HERO */
 
-    .hero__banner {
+    /* .hero__banner {
         background-size: cover;
-    }
+    } */
 
     .hero__title {
         width: 70%;
@@ -937,7 +1073,7 @@ h2 {
 
     .hero__title,
     .hero__descr {
-        width: 70%;
+        width: 75%;
     }
 
     /* ! ABOUT */
@@ -984,6 +1120,7 @@ h2 {
         /* margin: 0 auto 0 auto; */
         background-image: url("../img/about-example-pic-1024.png");
         background-size: cover;
+        background-position: top;
     }
 
     /* ! FOOTER */
@@ -1004,11 +1141,11 @@ h2 {
 
     /* ! HERO */
 
-    .hero__banner {
+    /* .hero__banner {
         height: 668px;
         background-image: url("../img/hero-pic-1024-1.png");
         background-size: cover;
-    }
+    } */
 
     .hero__title {
         width: 70%;
@@ -1026,11 +1163,23 @@ h2 {
         width: 40vw;
     }
 
-    .step__pic {
-        width: 437px;
-        height: 689px;
-        background-image: url("../img/how-pic-1024-1.jpg");
-        background-size: cover;
+    .step__img {
+        content: url("../img/how-pic-1024-1.jpg");
+    }
+
+    .step__img-2 {
+        content: url("../img/how-pic-1024-2.jpg");
+        height: 535px;
+    }
+
+    .step__img-3 {
+        content: url("../img/how-pic-1024-3.jpg");
+        height: 660px;
+    }
+
+    .step__img-4 {
+        content: url("../img/how-pic-1024-4.jpg");
+        height: 505px;
     }
 
     /* ! FOOTER */
@@ -1088,10 +1237,26 @@ h2 {
 
     /* ! HERO */
 
-    .hero__banner {
+    /* .hero__banner {
         height: 668px;
         background-image: url("../img/hero-pic-1024-1.png");
         background-size: cover;
+    } */
+
+    .swiper {
+        height: 668px;
+    }
+
+    .slide-1 {
+        background-image: url("../img/hero-pic-1024-1.png");
+    }
+
+    .slide-2 {
+        background-image: url("../img/hero-pic-1024-2.png");
+    }
+
+    .slide-3 {
+        background-image: url("../img/hero-pic-1024-3.png");
     }
 
     .banner__slide {
@@ -1106,7 +1271,9 @@ h2 {
 
     .hero__title {
         width: auto;
-        font-size: 60px;
+        /* font-size: 60px; */
+        font-size: calc(var(--index) * 3.118501);
+
         line-height: 73px;
     }
 
@@ -1121,9 +1288,9 @@ h2 {
         margin-top: 60px;
     }
 
-    .hero__bullitt-list {
+    /* .hero__bullitt-list {
         margin-top: 115px;
-    }
+    } */
 
     /* ! ABOUT */
 
@@ -1164,14 +1331,24 @@ h2 {
 
     .step__desc {
         width: 437px;
+        margin-right: 50px;
     }
 
-    .step__pic {
+    .step__img {
+        content: url("../img/how-pic-1024-1.jpg");
         width: 437px;
-        height: 689px;
-        margin-top: 0;
-        background-image: url("../img/how-pic-1024-1.jpg");
-        background-size: cover;
+    }
+
+    .step__img-2 {
+        content: url("../img/how-pic-1024-2.jpg");
+    }
+
+    .step__img-3 {
+        content: url("../img/how-pic-1024-3.jpg");
+    }
+
+    .step__img-4 {
+        content: url("../img/how-pic-1024-4.jpg");
     }
 
     /* ! FAQ */
@@ -1209,6 +1386,17 @@ h2 {
     }
 }
 
+/* ? 950px */
+
+@media (max-width: 950px) {
+    /* ! HOW */
+
+    .step__img-3 {
+        content: url("../img/how-pic-1024-3.jpg");
+        height: 550px;
+    }
+}
+
 /* ? 850px */
 
 @media (max-width: 850px) {
@@ -1221,17 +1409,35 @@ h2 {
     }
 
     .hero__title {
-        width: 80%;
+        width: 93%;
     }
 
     .hero__bullitt-list {
         margin-top: 55px;
+    }
+
+    /* ! HOW */
+
+    .step__desc {
+        width: 350px;
+    }
+
+    .step__img-3 {
+        content: url("../img/how-pic-1024-3.jpg");
+        height: 500px;
     }
 }
 
 /* ? 768px */
 
 @media (max-width: 768px) {
+    /* ! GLOBAL STYLES */
+    .menu {
+        padding-top: 22px;
+    }
+
+    /* ! LOCAL STYLES */
+
     /* ! HEADER */
 
     .header__container {
@@ -1244,7 +1450,24 @@ h2 {
         margin-top: 40px;
     }
 
-    .hero__banner {
+    .swiper {
+        height: 662px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+    }
+
+    .swiper-slide {
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+    }
+
+    .banner__slide {
         border-radius: 24px;
         -webkit-border-radius: 24px;
         -moz-border-radius: 24px;
@@ -1264,7 +1487,7 @@ h2 {
     }
 
     .hero__descr {
-        width: 90%;
+        width: 88%;
         font-size: 18px;
         line-height: 22px;
     }
@@ -1335,15 +1558,29 @@ h2 {
 
     .step__pic {
         order: -1;
+    }
+
+    .step__img {
+        content: url("../img/how-pic-768-1.jpg");
         width: 100%;
-        height: 284px;
-        background-image: url("../img/how-pic-768-1.jpg");
-        background-size: cover;
+        height: auto;
         border-radius: 24px;
         -webkit-border-radius: 24px;
         -moz-border-radius: 24px;
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
+    }
+
+    .step__img-2 {
+        content: url("../img/how-pic-768-2.jpg");
+    }
+
+    .step__img-3 {
+        content: url("../img/how-pic-768-3.jpg");
+    }
+
+    .step__img-4 {
+        content: url("../img/how-pic-768-4.jpg");
     }
 
     .step__header {
@@ -1497,10 +1734,14 @@ h2 {
 @media (max-width: 545px) {
     /* ! HERO */
 
-    .hero__banner {
+    /* .hero__banner {
         height: 575px;
-        /* background-image: url("../img/hero-pic-320-1.png"); */
-        /* background-size: auto; */
+        background-image: url("../img/hero-pic-320-1.png");
+        background-size: auto;
+    } */
+
+    .swiper {
+        height: 575px;
     }
 
     .banner__slide {
@@ -1561,9 +1802,8 @@ h2 {
         margin-left: 45px;
     }
 
-    .step__pic {
+    .step__img {
         height: 160px;
-        background-image: url("../img/how-pic-320-1.jpg");
     }
 
     .step__btns {
@@ -1610,6 +1850,25 @@ h2 {
         line-height: 30px;
     }
 
+    .menu {
+        width: 100%;
+        padding-top: 23px;
+        padding-left: 15px;
+    }
+
+    .menu__list {
+        margin-top: 32px;
+    }
+
+    .menu__item {
+        margin-bottom: 32px;
+    }
+
+    .menu__link {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
     /* ! LOCAL STYLES */
 
     /* ! HEADER */
@@ -1626,11 +1885,42 @@ h2 {
         margin-top: 30px;
     }
 
-    .hero__banner {
+    /* .hero__banner {
         width: 100%;
         height: 308px;
         background-image: url("../img/hero-pic-320-1.png");
         background-size: cover;
+    } */
+
+    :root {
+        --swiper-pagination-bottom: 15px;
+        --swiper-pagination-bullet-size: 10px;
+    }
+
+    .swiper {
+        width: auto;
+        height: 308px;
+    }
+
+    .swiper-slide {
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+    .slide-1 {
+        background-image: url("../img/hero-pic-768-1.png");
+        background-size: cover;
+    }
+
+    .slide-2 {
+        background-image: url("../img/hero-pic-768-2.png");
+    }
+
+    .slide-3 {
+        background-image: url("../img/hero-pic-768-3.png");
     }
 
     .banner__slide {
@@ -1692,8 +1982,22 @@ h2 {
         margin-top: 8px;
     }
 
+    .example__btn:active {
+        background-color: #e1670e;
+        color: white;
+    }
+
+    .example__btn:focus {
+        background-color: #ffb84d;
+        border-color: #ffb84d;
+        color: white;
+    }
+
+    .info__block:first-child {
+        margin-top: 32px;
+    }
+
     .info__logo {
-        margin-top: 30px;
         width: 90px;
         height: 76px;
     }
@@ -1716,9 +2020,12 @@ h2 {
         margin-top: 20px;
     }
 
-    .step__pic {
-        height: 220px;
-        background-size: contain;
+    .step__img {
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
     }
 
     .step__header {
@@ -1865,12 +2172,12 @@ h2 {
 
     /* ! HERO */
 
-    .hero__banner {
+    /* .hero__banner {
         width: 290px;
         height: 308px;
         background-image: url("../img/hero-pic-320-1.png");
         background-size: cover;
-    }
+    } */
 
     .banner__slide {
         padding-top: 60px;
@@ -2012,18 +2319,6 @@ h2 {
 
     .step__slide {
         margin-top: 16px;
-    }
-
-    .step__pic {
-        width: 100%;
-        height: 160px;
-        background-image: url("../img/how-pic-320-1.jpg");
-        background-size: cover;
-        border-radius: 16px;
-        -webkit-border-radius: 16px;
-        -moz-border-radius: 16px;
-        -ms-border-radius: 16px;
-        -o-border-radius: 16px;
     }
 
     .step__header {

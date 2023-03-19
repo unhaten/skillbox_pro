@@ -5,10 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ! SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- ! GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
         rel="stylesheet" />
+    <!-- ! ACCORDION -->
+    
+    <!-- ! MISC -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/index-master.css" />
     <title>Евклид</title>
@@ -16,17 +23,32 @@
 
 <body>
     <!-- ! HEADER -->
-
     <header class="header">
         <div class="container header__container">
-            <button class="burger">
+            <div id="menu" class="menu">
+                <button class="menu__btn" id="burger-close">
+                    <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                            fill="#333333" />
+                        <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+                    </svg>
+                </button>
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Проекты</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Этапы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                </ul>
+            </div>
+            <button class="burger" id="burger">
                 <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="30" height="3" fill="black" />
                     <rect y="10" width="30" height="3" fill="black" />
                     <rect y="20" width="30" height="3" fill="black" />
                 </svg>
             </button>
-            <a href="" class="main-logo">
+            <a href="#" class="main-logo">
                 <img src="img/Logo.svg" alt="Евклид" class="main-logo__img" />
             </a>
             <nav class="header__nav">
@@ -46,7 +68,7 @@
                     <li class="nav__item">
                         <a href="#" class="nav__link">Контакты</a>
                     </li>
-                    <button class="header__search">
+                    <button class="header__search" id="search">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="7.56126" height="1.89031"
                                 transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
@@ -70,9 +92,71 @@
 
         <section class="section__hero">
             <div class="container hero__container">
-                <div class="hero__banner banner">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slide-1">
+                            <div class="banner__slide banner__slide--1">
+                                <h1 class="hero__title">
+                                    Проектные решения любой сложности
+                                </h1>
+                                <p class="hero__descr">
+                                    Есть над чем задуматься: базовые сценарии
+                                    поведения пользователей и по сей день остаются
+                                    уделом проектантов
+                                </p>
+                                <button class="btn hero__btn">
+                                    Заказать расчёт
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-2">
+                            <div class="banner__slide banner__slide--1">
+                                <h1 class="hero__title">
+                                    Проектные решения любой сложности
+                                </h1>
+                                <p class="hero__descr">
+                                    Есть над чем задуматься: базовые сценарии
+                                    поведения пользователей и по сей день остаются
+                                    уделом проектантов
+                                </p>
+                                <button class="btn hero__btn">
+                                    Заказать расчёт
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-3">
+                            <div class="banner__slide banner__slide--1">
+                                <h1 class="hero__title">
+                                    Проектные решения любой сложности
+                                </h1>
+                                <p class="hero__descr">
+                                    Есть над чем задуматься: базовые сценарии
+                                    поведения пользователей и по сей день остаются
+                                    уделом проектантов
+                                </p>
+                                <button class="btn hero__btn">
+                                    Заказать расчёт
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div> -->
+                    <!-- <div class="swiper-button-next"></div> -->
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+                <!-- <div class="hero__banner banner">
                     <div class="banner__slide banner__slide--1">
-                        <!-- <img src="#" alt="banner-picture" class="banner_pic"> -->
                         <h1 class="hero__title">
                             Проектные решения любой сложности
                         </h1>
@@ -96,7 +180,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -213,21 +297,21 @@
         <section class="section__how">
             <div class="container how__container">
                 <h2 class="section__header how__header">Как мы работаем</h2>
-                <ul class="how__list">
+                <ul class="how__list tab">
                     <li class="how__item how__item--1">
-                        <a href="" class="how__link">1 шаг</a>
+                        <button class="how__link tab__btn" data-path="one">1 шаг</button>
                     </li>
                     <li class="how__item how__item--2">
-                        <a href="" class="how__link">2 шаг</a>
+                        <button class="how__link tab__btn" data-path="two">2 шаг</button>
                     </li>
                     <li class="how__item how__item--3">
-                        <a href="" class="how__link">3 шаг</a>
+                        <button class="how__link tab__btn" data-path="three">3 шаг</button>
                     </li>
                     <li class="how__item how__item--4">
-                        <a href="" class="how__link">4 шаг</a>
+                        <button class="how__link tab__btn" data-path="four">4 шаг</button>
                     </li>
                 </ul>
-                <div class="how__step">
+                <div class="how__step tab-content tab-content-active" data-target="one">
                     <div class="step__slide step__slide--1">
                         <div class="step__content">
                             <h3 class="step__header">
@@ -268,10 +352,105 @@
                         </div>
 
                         <div class="step__pic">
-                            <!-- <img src="img/how-pic-1.jpg" alt="" class="step__img"> -->
+                            <img src="img/how-pic-1.jpg" alt="" class="step__img">
                         </div>
                     </div>
                 </div>
+                <div class="how__step tab-content" data-target="two">
+                    <div class="step__slide step__slide--1">
+                        <div class="step__content">
+                            <h3 class="step__header">
+                                Составляем смету
+                            </h3>
+                            <p class="step__desc">
+                                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации
+                                современных стандартов, некоторые особенности внутренней политики будут объективно
+                                рассмотрены соответствующими инстанциями. А также представители современных социальных
+                                резервов, инициированные исключительно синтетически, ограничены исключительно образом
+                                мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных
+                                источников, современные исследования подвергнуты целой серии независимых исследований.
+                            </p>
+
+
+                            <div class="step__btns">
+                                <button class="btn step__btn-more">
+                                    Подробнее
+                                </button>
+                                <button class="btn step__btn-deal">
+                                    Договор
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="step__pic">
+                            <img src="img/how-pic-1.jpg" alt="" class="step__img step__img-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="how__step tab-content" data-target="three">
+                    <div class="step__slide step__slide--1">
+                        <div class="step__content">
+                            <h3 class="step__header">
+                                Привлекаем подрядчиков
+                            </h3>
+                            <p class="step__desc">
+                                Идейные соображения высшего порядка, а также новая модель организационной деятельности
+                                требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения
+                                представителей целевой аудитории является чётким доказательством простого факта:
+                                высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
+                                развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной
+                                деятельности говорит о возможностях системы массового участия. Принимая во внимание
+                                показатели успешности, постоянное информационно-пропагандистское обеспечение нашей
+                                деятельности позволяет выполнить важные задания по разработке прогресса
+                                профессионального сообщества.
+                            </p>
+
+                            <div class="step__btns">
+                                <button class="btn step__btn-more">
+                                    Подробнее
+                                </button>
+                                <button class="btn step__btn-deal">
+                                    Договор
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="step__pic">
+                            <img src="img/how-pic-1.jpg" alt="" class="step__img step__img-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="how__step tab-content" data-target="four">
+                    <div class="step__slide step__slide--1">
+                        <div class="step__content">
+                            <h3 class="step__header">
+                                Инспектируем все этапы работ
+                            </h3>
+                            <p class="step__desc">
+                                Высокий уровень вовлечения представителей целевой аудитории является чётким
+                                доказательством простого факта: высококачественный прототип будущего проекта напрямую
+                                зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам,
+                                что новая модель организационной деятельности говорит
+                                о возможностях системы массового участия. Принимая во внимание показатели успешности,
+                                постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+                            </p>
+                            <div class="step__btns">
+                                <button class="btn step__btn-more">
+                                    Подробнее
+                                </button>
+                                <button class="btn step__btn-deal">
+                                    Договор
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="step__pic">
+                            <img src="img/how-pic-1.jpg" alt="" class="step__img step__img-4">
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
@@ -428,25 +607,25 @@
                 </a>
                 <ul class="footer__list">
                     <li class="footer__item">
-                        <a href="" class="footer__link">О нас</a>
+                        <a href="#" class="footer__link">О нас</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">Проекты</a>
+                        <a href="#" class="footer__link">Проекты</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">Отзывы</a>
+                        <a href="#" class="footer__link">Отзывы</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">Договор оферты</a>
+                        <a href="#" class="footer__link">Договор оферты</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">Договор подряда</a>
+                        <a href="#" class="footer__link">Договор подряда</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">Конфиденциальность</a>
+                        <a href="#" class="footer__link">Конфиденциальность</a>
                     </li>
                     <li class="footer__item">
-                        <a href="" class="footer__link">Партнёрское соглашение</a>
+                        <a href="#" class="footer__link">Партнёрское соглашение</a>
                     </li>
                 </ul>
                 <div class="footer__logos">
@@ -495,7 +674,12 @@
 
     <script>
         // alert(window.innerWidth)
+        // alert(window.innerHeight)
     </script>
+    <script src="js/tab.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/accordion.js"></script>
 
 </body>
 
