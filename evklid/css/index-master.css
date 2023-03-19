@@ -694,40 +694,12 @@ h2 {
     margin-top: 32px;
 }
 
-@keyframes invisiblyGrowFontSize {
-    0% {
-        font-size: 0;
-        opacity: 0;
-    }
-    100% {
-        font-size: 1em;
-        opacity: 0;
-    }
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .details {
     position: relative;
     padding: 31px 0 30px 0;
     transition-property: color;
     transition-duration: 0.3s;
     transition-timing-function: ease;
-    transition-property: height;
-    transition-duration: 5s;
-    transition-timing-function: ease;
-}
-
-.details[open] .details__answer {
-    animation-name: invisiblyGrowFontSize, fadeIn;
-    animation-duration: 300ms, 300ms;
-    animation-delay: 0ms, 300ms;
 }
 
 .details:hover {
@@ -2037,6 +2009,10 @@ h2 {
 
     .details__question {
         font-weight: 400;
+    }
+
+    .details__answer {
+        width: 100%;
     }
 
     .question__icon,
