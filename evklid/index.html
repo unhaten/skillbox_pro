@@ -14,7 +14,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
         rel="stylesheet" />
     <!-- ! ACCORDION -->
-    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                collapsible: true,
+                heightStyle: "content",
+                active: 'none'
+            });
+        });
+    </script>
     <!-- ! MISC -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/index-master.css" />
@@ -461,7 +473,109 @@
                 <h2 class="section__header faq__header">
                     Часто задаваемые вопросы
                 </h2>
-                <div class="faq__details">
+                <div id="accordion" class="faq__details">
+                    <h3 class="details__question">Из чего формируется конечная стоимость проекта?
+                        <span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                                    fill="black" />
+                            </svg>
+                        </span>
+                    </h3>
+                    <div>
+                        <p class="details__answer">
+                            Являясь всего лишь частью общей картины,
+                            непосредственные участники технического
+                            прогресса призывают нас  к новым свершениям,
+                            которые, в свою очередь, должны быть
+                            своевременно верифицированы.
+                            Но высококачественный прототип будущего проекта
+                            является качественно новой ступенью
+                            первоочередных требований. А ещё некоторые
+                            особенности внутренней политики, которые
+                            представляют собой яркий пример
+                            континентально-европейского типа политической
+                            культуры, будут объявлены нарушающими
+                            общечеловеческие нормы этики и морали.
+                            И нет сомнений, что явные признаки победы
+                            институционализации призывают нас к новым
+                            свершениям, которые, в свою очередь, должны быть
+                            указаны как претенденты на роль ключевых
+                            факторов.
+                        </p>
+                        <p class="details__answer">
+                            Приятно, граждане, наблюдать, как некоторые
+                            особенности внутренней политики могут быть
+                            призваны к ответу. Явные признаки победы
+                            институционализации набирают популярность среди
+                            определённых слоёв населения, а значит, должны
+                            быть объединены в целые кластеры себе подобных.
+                            Банальные, но неопровержимые выводы, а также
+                            многие известные личности призывают нас к новым
+                            свершениям, которые, в свою очередь, должны быть
+                            представлены в исключительно положительном
+                            свете.
+                        </p>
+                    </div>
+                    <h3 class="details__question">У меня есть свой проект. Сможем ли мы
+                        его доработать / реализовать?</h3>
+                    <div>
+                        <p>
+                            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                            suscipit faucibus urna.
+                        </p>
+                    </div>
+                    <h3 class="details__question">Я выбираю между разными компаниями. В чём ваше
+                        отличие?</h3>
+                    <div>
+                        <p>
+                            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                        </p>
+                        <ul>
+                            <li>List item one</li>
+                            <li>List item two</li>
+                            <li>List item three</li>
+                        </ul>
+                    </div>
+                    <h3 class="details__question">Могу ли я делегировать вам работу / согласование
+                        с подрядчиком / организацией?</h3>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.
+                        </p>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.
+                        </p>
+                    </div>
+                    <h3 class="details__question">Могу ли я вернуть деньги на каком-либо из этапов
+                        работ?</h3>
+                    <div>
+                        <p>
+                            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                            mauris vel est.
+                        </p>
+                        <p>
+                            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                            inceptos himenaeos.
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="faq__details">
                     <details class="details details--1">
                         <summary class="details__question">
                             Из чего формируется конечная стоимость проекта?
@@ -592,7 +706,7 @@
                             eos at eius aliquam ad voluptatem placeat!
                         </p>
                     </details>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
