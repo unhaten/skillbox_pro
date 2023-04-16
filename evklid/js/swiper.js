@@ -25,6 +25,6 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector("#slide").addEventListener("click");
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     document.querySelector("#slide").addEventListener("click");
+// });

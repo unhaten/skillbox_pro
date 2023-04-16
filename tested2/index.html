@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index-master.css">
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <!-- Include Choices CSS -->
+    <link rel="stylesheet" href="choices.min.css" />
+    <!-- Include Choices JavaScript -->
+    <script src="choices.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="inputmask.min.js"></script>
+
+
+
+
+    <noscript>
+        <style>
+            /**
+          * Reinstate scrolling for non-JS clients
+          */
+            .simplebar-content-wrapper {
+                scrollbar-width: auto;
+                -ms-overflow-style: auto;
+            }
+
+            .simplebar-content-wrapper::-webkit-scrollbar,
+            .simplebar-hide-scrollbar::-webkit-scrollbar {
+                display: initial;
+                width: initial;
+                height: initial;
+            }
+        </style>
+    </noscript>
+
+
+</head>
+
+<body>
+    <!-- <div id="menu" class="menu">
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3</li>
+        </ul>
+    </div>
+    <div class="block">
+        <div id="burger" class="burger"></div>
+    </div>
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+        dignissimos nisi qui, est ipsam nesciunt quaerat iusto suscipit hic,
+        minima eaque veniam eius atque! Accusamus similique laboriosam
+        expedita ipsam nam.
+    </p>
+    <p id="text" class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        dolorum, omnis necessitatibus ut deleniti alias soluta sit, eveniet
+        error aliquam tenetur velit a corrupti itaque fugit. Ipsa atque
+        corporis recusandae.
+    </p>
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        odit reiciendis laborum iure inventore corporis ex, neque magnam ab
+        fugiat ipsa, itaque quis, exercitationem officiis ratione quidem
+        nulla soluta doloribus.
+    </p> -->
+
+    <!-- <label for="check">
+        <input type="checkbox" name="check" id="check">
+        checkbox
+        <span></span>
+    </label> -->
+
+    <div class="content__container">
+        <div class="checkbox__container">
+            <h3 class="checkbox__header">Категории:</h3>
+            <ul class="checkbox__list">
+                <li class="checkbox__item">
+                    <label for="check1" class="checkbox__label">
+                        <input type="checkbox" name="check" id="check1">
+                        Динозавры
+                        <span class="checkbox__span"></span>
+                    </label>
+                </li>
+                <li class="checkbox__item">
+                    <label for="check2" class="checkbox__label">
+                        <input type="checkbox" name="check" id="check2">
+                        Медведи
+                        <span class="checkbox__span"></span>
+                    </label>
+                </li>
+                <li class="checkbox__item">
+                    <label for="check3" class="checkbox__label">
+                        <input type="checkbox" name="check" id="check3">
+                        Косули
+                        <span class="checkbox__span"></span>
+                    </label>
+                </li>
+                <li class="checkbox__item">
+                    <label for="check4" class="checkbox__label">
+                        <input type="checkbox" name="check" id="check4">
+                        Лисы
+                        <span class="checkbox__span"></span>
+                    </label>
+                </li>
+                <li class="checkbox__item">
+                    <label for="check5" class="checkbox__label">
+                        <input type="checkbox" name="check" id="check5">
+                        Волки
+                        <span class="checkbox__span"></span>
+                    </label>
+                </li>
+                <li class="checkbox__item">
+                    <label for="check6" class="checkbox__label">
+                        <input type="checkbox" name="check" id="check6">
+                        Олени и лоси
+                        <span class="checkbox__span"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tooltip__container">
+            <div class="tooltip__text">
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+                внешнеэкономических политик.
+                <div class="tooltip__marker">
+                    <div class="marker__container">
+                        <svg class="tooltip__icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+                                fill="#BCBCBC" />
+                        </svg>
+                        <div class="tooltip__popup">
+                            <div class="popup__content">
+                                <span class="popup__text">Глава 2, страница 176</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <select name="select" id="select" class="selector">
+            <option value="" selected>Материал</option>
+            <!-- <option value="">This is a placeholder</option> -->
+            <option value="1">Древесина</option>
+            <option value="2">Металл</option>
+            <option value="3">Камень</option>
+            <option value="4">Пластик</option>
+            <option value="5">Композитный</option>
+            <option value="6">Гипс</option>
+        </select>
+
+
+    </div>
+
+    <div class="content__container">
+        <div class="scrollbar__container" data-simplebar>
+            Сложно сказать, почему многие известные личности представлены в исключительно положительном свете. Лишь
+            активно
+            развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы вынуждены
+            отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный
+            эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно
+            следующее:
+            непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в
+            целом,
+            однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что
+            социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые
+            горизонты
+            для первоочередных требований.
+        </div>
+
+        <div class="form__container">
+            <form action="POST" class="form" id="form" autocomplete="false">
+                <label for="" class="form__label">
+                    <input type="text" name="Имя" id="name" placeholder="Имя*" data-validate-field="name">
+                </label>
+                <label for="" class="form__label">
+                    <input type="tel" name="tel" id="maskedSelector" placeholder="Телефон*" data-validate-field="tel"
+                        data-validate-rules="phone">
+                </label>
+                <label for="" class="form__label">
+                    <input type="email" name="email" id="email" placeholder="E-mail*" data-validate-field="mail">
+                </label>
+                <button class="form__btn">Заказать</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        const element = document.querySelector('#select');
+        const choices = new Choices(element, {
+            allowHTML: true,
+            searchEnabled: false,
+            placeholder: true,
+            itemSelectText: '',
+        });
+    </script>
+
+
+
+    <script>
+        var maskedSelector = document.getElementById("maskedSelector");
+
+        var im = new Inputmask("+7(999) 999-99-99");
+        im.mask(maskedSelector);
+
+
+        const validate = new window.JustValidate('#form');
+
+        validate
+            .addField('#name', [
+                {
+                    rule: 'minLength',
+                    value: 3,
+                    errorMessage: 'Имя должно состоять минимум из 3 символов',
+                },
+                {
+                    rule: 'maxLength',
+                    value: 30,
+                    errorMessage: 'Имя не может содержать более 30 символов',
+                },
+                {
+                    rule: 'required',
+                    errorMessage: 'Вы не ввели имя',
+                },
+            ])
+            .addField('#email', [
+                {
+                    rule: 'required',
+                    errorMessage: 'Вы не ввели e-mail',
+                },
+                {
+                    rule: 'email',
+                    errorMessage: 'E-mail введен неправильно',
+                },
+            ])
+            .addField('#maskedSelector', [
+                {
+                    validator: function (name, value) {
+                        const phone = maskedSelector.inputmask.unmaskedvalue()
+                        return Number(phone) && phone.length === 10
+                    },
+                    errorMessage: 'Вы не ввели телефон',
+                },
+            ]);
+
+    </script>
+
+
+</body>
+
+</html>

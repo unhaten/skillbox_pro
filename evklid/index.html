@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8" />
@@ -38,7 +38,7 @@
     <header class="header">
         <div class="container header__container">
             <div id="menu" class="menu">
-                <button class="menu__btn" id="burger-close">
+                <button class="menu__btn" id="burger-close" aria-label="Закрыть меню" tabindex="-1">
                     <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
                             fill="#333333" />
@@ -46,14 +46,14 @@
                     </svg>
                 </button>
                 <ul class="menu__list">
-                    <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Проекты</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Этапы</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" tabindex="-1">О нас</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" tabindex="-1">Проекты</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" tabindex="-1">Этапы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" tabindex="-1">Отзывы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link" tabindex="-1">Контакты</a></li>
                 </ul>
             </div>
-            <button class="burger" id="burger">
+            <button class="burger" id="burger" aria-label="Меню">
                 <svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="30" height="3" fill="black" />
                     <rect y="10" width="30" height="3" fill="black" />
@@ -80,7 +80,7 @@
                     <li class="nav__item">
                         <a href="#" class="nav__link">Контакты</a>
                     </li>
-                    <button class="header__search" id="search">
+                    <button class="header__search" id="search" aria-label="Поиск">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="7.56126" height="1.89031"
                                 transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
@@ -103,96 +103,86 @@
         <!-- ! HERO -->
 
         <section class="section__hero">
-            <div class="container hero__container">
-                <!-- Slider main container -->
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide slide-1">
-                            <div class="banner__slide banner__slide--1">
-                                <h1 class="hero__title">
-                                    Проектные решения любой сложности
-                                </h1>
-                                <p class="hero__descr">
-                                    Есть над чем задуматься: базовые сценарии
-                                    поведения пользователей и по сей день остаются
-                                    уделом проектантов
-                                </p>
-                                <button class="btn hero__btn">
-                                    Заказать расчёт
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide slide-2">
-                            <div class="banner__slide banner__slide--1">
-                                <h1 class="hero__title">
-                                    Проектные решения любой сложности
-                                </h1>
-                                <p class="hero__descr">
-                                    Есть над чем задуматься: базовые сценарии
-                                    поведения пользователей и по сей день остаются
-                                    уделом проектантов
-                                </p>
-                                <button class="btn hero__btn">
-                                    Заказать расчёт
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide slide-3">
-                            <div class="banner__slide banner__slide--1">
-                                <h1 class="hero__title">
-                                    Проектные решения любой сложности
-                                </h1>
-                                <p class="hero__descr">
-                                    Есть над чем задуматься: базовые сценарии
-                                    поведения пользователей и по сей день остаются
-                                    уделом проектантов
-                                </p>
-                                <button class="btn hero__btn">
-                                    Заказать расчёт
-                                </button>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-
-                    <!-- If we need navigation buttons -->
-                    <!-- <div class="swiper-button-prev"></div> -->
-                    <!-- <div class="swiper-button-next"></div> -->
-
-                    <!-- If we need scrollbar -->
-                    <!-- <div class="swiper-scrollbar"></div> -->
+            <div class="container hero__container banner__slide">
+                <div class="banner__content">
+                    <h1 class="hero__title">
+                        Проектные решения любой сложности
+                    </h1>
+                    <p class="hero__descr">
+                        Есть над чем задуматься: базовые сценарии
+                        поведения пользователей и по сей день остаются
+                        уделом проектантов
+                    </p>
+                    <button class="btn hero__btn" aria-label="Заказать расчет">
+                        Заказать расчёт
+                    </button>
                 </div>
-                <!-- <div class="hero__banner banner">
-                    <div class="banner__slide banner__slide--1">
-                        <h1 class="hero__title">
-                            Проектные решения любой сложности
-                        </h1>
-                        <p class="hero__descr">
-                            Есть над чем задуматься: базовые сценарии
-                            поведения пользователей и по сей день остаются
-                            уделом проектантов
-                        </p>
-                        <button class="btn hero__btn">
-                            Заказать расчёт
-                        </button>
-                        <ul class="hero__bullitt-list">
-                            <li class="hero__bullitt-item">
-                                <span class="hero__bullit-icon hero__bullitt-icon_white"></span>
-                            </li>
-                            <li class="hero__bullitt-item">
-                                <span class="hero__bullit-icon"></span>
-                            </li>
-                            <li class="hero__bullitt-item">
-                                <span class="hero__bullit-icon"></span>
-                            </li>
-                        </ul>
+                <div class="swiper__container"><!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide slide-1">
+                                <!-- <div class="banner__slide banner__slide--1">
+                                    <h1 class="hero__title">
+                                        Проектные решения любой сложности
+                                    </h1>
+                                    <p class="hero__descr">
+                                        Есть над чем задуматься: базовые сценарии
+                                        поведения пользователей и по сей день остаются
+                                        уделом проектантов
+                                    </p>
+                                    <button class="btn hero__btn">
+                                        Заказать расчёт
+                                    </button>
+                                </div> -->
+                            </div>
+                            <div class="swiper-slide slide-2">
+                                <!-- <div class="banner__slide banner__slide--1">
+                                    <h1 class="hero__title">
+                                        Проектные решения любой сложности
+                                    </h1>
+                                    <p class="hero__descr">
+                                        Есть над чем задуматься: базовые сценарии
+                                        поведения пользователей и по сей день остаются
+                                        уделом проектантов
+                                    </p>
+                                    <button class="btn hero__btn">
+                                        Заказать расчёт
+                                    </button>
+                                </div> -->
+                            </div>
+                            <div class="swiper-slide slide-3">
+                                <!-- <div class="banner__slide banner__slide--1">
+                                    <h1 class="hero__title">
+                                        Проектные решения любой сложности
+                                    </h1>
+                                    <p class="hero__descr">
+                                        Есть над чем задуматься: базовые сценарии
+                                        поведения пользователей и по сей день остаются
+                                        уделом проектантов
+                                    </p>
+                                    <button class="btn hero__btn">
+                                        Заказать расчёт
+                                    </button>
+                                </div> -->
+                            </div>
+
+
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <!-- <div class="swiper-button-prev"></div> -->
+                        <!-- <div class="swiper-button-next"></div> -->
+
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
                     </div>
-                </div> -->
+                </div>
+
+
             </div>
         </section>
 
@@ -229,7 +219,7 @@
                                     способствует подготовке и реализации
                                     новых принципов
                                 </p>
-                                <button class="btn example__btn">
+                                <button class="btn example__btn" aria-label="Подробнее">
                                     Подробнее
                                 </button>
                             </div>
@@ -310,7 +300,7 @@
             <div class="container how__container">
                 <h2 class="section__header how__header">Как мы работаем</h2>
                 <ul class="how__list tab">
-                    <li class="how__item how__item--1">
+                    <li class="how__item how__item--1" aria-label="Наша работа в четырех шагах">
                         <button class="how__link tab__btn" data-path="one">1 шаг</button>
                     </li>
                     <li class="how__item how__item--2">
@@ -354,10 +344,10 @@
                             </p>
 
                             <div class="step__btns">
-                                <button class="btn step__btn-more">
+                                <button class="btn step__btn-more" aria-label="Подробнее">
                                     Подробнее
                                 </button>
-                                <button class="btn step__btn-deal">
+                                <button class="btn step__btn-deal" aria-label="Посмотреть договор">
                                     Договор
                                 </button>
                             </div>
@@ -385,10 +375,10 @@
 
 
                             <div class="step__btns">
-                                <button class="btn step__btn-more">
+                                <button class="btn step__btn-more" aria-label="Подробнее">
                                     Подробнее
                                 </button>
-                                <button class="btn step__btn-deal">
+                                <button class="btn step__btn-deal" aria-label="Посмотреть договор">
                                     Договор
                                 </button>
                             </div>
@@ -418,10 +408,10 @@
                             </p>
 
                             <div class="step__btns">
-                                <button class="btn step__btn-more">
+                                <button class="btn step__btn-more" aria-label="Подробнее">
                                     Подробнее
                                 </button>
-                                <button class="btn step__btn-deal">
+                                <button class="btn step__btn-deal" aria-label="Посмотреть договор">
                                     Договор
                                 </button>
                             </div>
@@ -447,10 +437,10 @@
                                 постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
                             </p>
                             <div class="step__btns">
-                                <button class="btn step__btn-more">
+                                <button class="btn step__btn-more" aria-label="Подробнее">
                                     Подробнее
                                 </button>
-                                <button class="btn step__btn-deal">
+                                <button class="btn step__btn-deal" aria-label="Посмотреть договор">
                                     Договор
                                 </button>
                             </div>
@@ -520,8 +510,8 @@
                         </p>
                     </div>
                     <h3 class="details__question">У меня есть свой проект. Сможем ли мы
-                        его доработать / реализовать?<span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                        его доработать / реализовать?<span class="question__icon"><svg width="50" height="50"
+                                viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
@@ -559,8 +549,8 @@
                         </ul>
                     </div>
                     <h3 class="details__question">Могу ли я делегировать вам работу / согласование
-                        с подрядчиком / организацией?<span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                        с подрядчиком / организацией?<span class="question__icon"><svg width="50" height="50"
+                                viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
@@ -603,138 +593,6 @@
                         </p>
                     </div>
                 </div>
-                <!-- <div class="faq__details">
-                    <details class="details details--1">
-                        <summary class="details__question">
-                            Из чего формируется конечная стоимость проекта?
-                            <span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                        fill="black" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="details__answer">
-                            Являясь всего лишь частью общей картины,
-                            непосредственные участники технического
-                            прогресса призывают нас  к новым свершениям,
-                            которые, в свою очередь, должны быть
-                            своевременно верифицированы.
-                            Но высококачественный прототип будущего проекта
-                            является качественно новой ступенью
-                            первоочередных требований. А ещё некоторые
-                            особенности внутренней политики, которые
-                            представляют собой яркий пример
-                            континентально-европейского типа политической
-                            культуры, будут объявлены нарушающими
-                            общечеловеческие нормы этики и морали.
-                            И нет сомнений, что явные признаки победы
-                            институционализации призывают нас к новым
-                            свершениям, которые, в свою очередь, должны быть
-                            указаны как претенденты на роль ключевых
-                            факторов.
-                        </p>
-                        <p class="details__answer">
-                            Приятно, граждане, наблюдать, как некоторые
-                            особенности внутренней политики могут быть
-                            призваны к ответу. Явные признаки победы
-                            институционализации набирают популярность среди
-                            определённых слоёв населения, а значит, должны
-                            быть объединены в целые кластеры себе подобных.
-                            Банальные, но неопровержимые выводы, а также
-                            многие известные личности призывают нас к новым
-                            свершениям, которые, в свою очередь, должны быть
-                            представлены в исключительно положительном
-                            свете.
-                        </p>
-                    </details>
-                    <details class="details details--2">
-                        <summary class="details__question">
-                            У меня есть свой проект. Сможем ли мы
-                            его доработать / реализовать?
-                            <span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                        fill="black" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="details__answer">
-                            Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Commodi, laborum facilis eius
-                            beatae in unde nam dolores inventore!
-                            Voluptatibus possimus quis similique quibusdam
-                            eos at eius aliquam ad voluptatem placeat!
-                        </p>
-                    </details>
-                    <details class="details details--3">
-                        <summary class="details__question">
-                            Я выбираю между разными компаниями. В чём ваше
-                            отличие?
-                            <span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                        fill="black" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="details__answer">
-                            Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Commodi, laborum facilis eius
-                            beatae in unde nam dolores inventore!
-                            Voluptatibus possimus quis similique quibusdam
-                            eos at eius aliquam ad voluptatem placeat!
-                        </p>
-                    </details>
-                    <details class="details details--4">
-                        <summary class="details__question">
-                            Могу ли я делегировать вам работу / согласование
-                            с подрядчиком / организацией?
-                            <span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                        fill="black" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="details__answer">
-                            Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Commodi, laborum facilis eius
-                            beatae in unde nam dolores inventore!
-                            Voluptatibus possimus quis similique quibusdam
-                            eos at eius aliquam ad voluptatem placeat!
-                        </p>
-                    </details>
-                    <details class="details details--5">
-                        <summary class="details__question">
-                            Могу ли я вернуть деньги на каком-либо из этапов
-                            работ?
-                            <span class="question__icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="25" cy="25" rx="25" ry="25" fill="#CACACA" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                        fill="black" />
-                                </svg>
-                            </span>
-                        </summary>
-                        <p class="details__answer">
-                            Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Commodi, laborum facilis eius
-                            beatae in unde nam dolores inventore!
-                            Voluptatibus possimus quis similique quibusdam
-                            eos at eius aliquam ad voluptatem placeat!
-                        </p>
-                    </details>
-                </div> -->
             </div>
         </section>
     </main>
@@ -793,11 +651,14 @@
             <div class="footer__center">
                 <form action="POST" class="footer__form">
                     <h2 class="form__header">Оставить заявку</h2>
+                    <span class="visually-hidden">Введите имя</span>
                     <input type="text" class="form__input form__initials" placeholder="Фамилия, имя и отчество*"
                         required />
+                    <span class="visually-hidden">Введите почту</span>
                     <input type="email" class="form__input form__email" placeholder="Email*" required />
+                    <span class="visually-hidden">Введите сообщение</span>
                     <textarea type="text" class="form__input form__msg" placeholder="Сообщение"></textarea>
-                    <button class="btn form__btn">Отправить данные</button>
+                    <button class="btn form__btn" aria-label="Отправить данные">Отправить данные</button>
                 </form>
             </div>
             <div class="footer__right">
@@ -822,7 +683,6 @@
     <script src="js/burger.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/accordion.js"></script>
-
 </body>
 
 </html>
